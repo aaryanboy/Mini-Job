@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import Button from '../components/common/Button';
 import Tag from '../components/common/Tag';
 import jobsData from '../data/jobs.json';
@@ -6,6 +7,23 @@ import jobsData from '../data/jobs.json';
 const JobDetail = () => {
   const { id } = useParams();
   const job = jobsData.find((j) => j.id === id);
+  const [showNotification, setShowNotification] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
+
+  const handleApply = () => {
+    setShowNotification(true);
+    setIsExiting(false);
+    
+    // Start exit animation after 3 seconds
+    setTimeout(() => {
+      setIsExiting(true);
+      // Remove from DOM after animation completes (0.5s)
+      setTimeout(() => {
+        setShowNotification(false);
+        setIsExiting(false);
+      }, 500);
+    }, 3000);
+  };
 
   if (!job) {
     return (
@@ -19,53 +37,83 @@ const JobDetail = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-[#E8E8F5] to-[#D5D5F0] min-h-screen pt-40 pb-16">
-      {/* Header Card */}
-      <div className="px-4 mb-8">
-        <div className="w-[98%] max-w-[1600px] mx-auto bg-white rounded-[30px] p-8 md:p-12 shadow-sm">
-          {/* Company Name with Icon */}
-          <div className="flex items-center gap-3 mb-4">
-            <img 
-              src={job.logo} 
-              alt={`${job.company} logo`} 
-              className="w-8 h-8 object-contain"
-            />
-            <span className="text-gray-600 font-medium text-lg">{job.company}</span>
-          </div>
-
-          {/* Job Title & Skills */}
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{job.title}</h1>
-            <div className="flex gap-2">
-              {job.skills.map(skill => (
-                <Tag key={skill} variant="outline" className="bg-[#F0F0F8] text-[#5B5FE6] border-[#E0E0F0] text-sm px-4 py-1.5">
-                  {skill}
-                </Tag>
-              ))}
+    <>
+      {/* Notification Toast */}
+      {showNotification && (
+        <div 
+          className={`fixed bottom-8 right-8 z-50 flex items-center gap-4 ${
+            isExiting ? 'animate-slide-down' : 'animate-slide-up'
+          }`}
+        >
+          <div className="bg-[#5B5FE6] text-white px-8 py-5 rounded-full text-xl font-medium shadow-2xl flex items-center gap-4">
+            Application submitted
+            <div className="bg-white/20 p-2 rounded-full">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                strokeWidth={2.5} 
+                stroke="currentColor" 
+                className="w-6 h-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
             </div>
           </div>
+        </div>
+      )}
 
-          {/* Location */}
-          <p className="text-gray-500 text-lg mb-4">{job.location}</p>
+      <div className="bg-gradient-to-b from-[#E8E8F5] to-[#D5D5F0] min-h-screen pt-40 pb-16">
+        {/* Header Card */}
+        <div className="px-4 mb-8">
+          <div className="w-[98%] max-w-[1600px] mx-auto bg-white rounded-[30px] p-8 md:p-12 shadow-sm">
+            {/* Company Name with Icon */}
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={job.logo} 
+                alt={`${job.company} logo`} 
+                className="w-8 h-8 object-contain"
+              />
+              <span className="text-gray-600 font-medium text-lg">{job.company}</span>
+            </div>
 
-          {/* Job Type Tag */}
-          <div className="mb-6">
-            <Tag variant="primary" className="px-5 py-2 text-sm bg-[#E8E8F5] text-[#5B5FE6] rounded-full">
-              {job.type}
-            </Tag>
-          </div>
+            {/* Job Title & Skills */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{job.title}</h1>
+              <div className="flex gap-2">
+                {job.skills.map(skill => (
+                  <Tag key={skill} variant="outline" className="bg-[#F0F0F8] text-[#5B5FE6] border-[#E0E0F0] text-sm px-4 py-1.5">
+                    {skill}
+                  </Tag>
+                ))}
+              </div>
+            </div>
 
-          {/* Action Buttons */}
-          <div className="flex gap-3">
-            <Button variant="primary" className="px-6 py-2.5 rounded-full text-sm font-medium shadow-md">
-              Apply →
-            </Button>
-            <Button variant="secondary" className="px-6 py-2.5 rounded-full text-sm font-medium bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none">
-              Save
-            </Button>
+            {/* Location */}
+            <p className="text-gray-500 text-lg mb-4">{job.location}</p>
+
+            {/* Job Type Tag */}
+            <div className="mb-6">
+              <Tag variant="primary" className="px-5 py-2 text-sm bg-[#E8E8F5] text-[#5B5FE6] rounded-full">
+                {job.type}
+              </Tag>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex gap-4">
+              <Button 
+                variant="primary" 
+                className="px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transform transition-transform hover:-translate-y-1"
+                onClick={handleApply}
+              >
+                Apply →
+              </Button>
+              <Button variant="secondary" className="px-10 py-4 rounded-full text-lg font-bold bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none shadow-sm hover:shadow-md transform transition-transform hover:-translate-y-1">
+                Save
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
 
       {/* About Section */}
       <div className="px-4">
@@ -95,6 +143,7 @@ const JobDetail = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
