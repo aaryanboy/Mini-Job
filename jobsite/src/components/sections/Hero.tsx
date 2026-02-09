@@ -60,7 +60,14 @@ const Hero = () => {
             width="240px"
             height="54px"
             text="18px"
-            href="/find-jobs"
+            onClick={() => {
+              const element = document.getElementById('find-jobs');
+              if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+              }
+            }}
           >
             Find Jobs
           </Button>

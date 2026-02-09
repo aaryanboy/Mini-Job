@@ -17,7 +17,14 @@ const CallToAction = () => {
              <Button 
               variant="primary" 
               className="w-full py-3 text-lg shadow-md transition-all duration-300"
-              href="/auth"
+              onClick={() => {
+                const element = document.getElementById('find-jobs');
+                if (element) {
+                  const offset = 80;
+                  const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                  window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+                }
+              }}
             >
             Get Started - It's Free
           </Button>
