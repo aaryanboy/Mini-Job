@@ -14,7 +14,8 @@
         "postedAt": "2 days ago",
         "aboutCompany": "Tech Solutions Inc. is a leading provider of innovative software solutions...",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "role": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "roleDetails": "We are looking for a skilled developer with strong experience in modern frontend frameworks. You will be responsible for building reusable components and ensuring excellent user experiences across all devices. The ideal candidate thrives in a collaborative environment and is passionate about clean, maintainable code."
     },
     {
         "id": "2",
@@ -31,7 +32,8 @@
         "postedAt": "1 day ago",
         "aboutCompany": "Creative Studio is a design-first agency focused on building beautiful digital experiences...",
         "description": "We are looking for a talented Product Designer to join our team. You will be responsible for designing user-centric interfaces and experiences for our clients.",
-        "role": "You will work closely with product managers and engineers to translate requirements into intuitive and attractive designs."
+        "role": "You will work closely with product managers and engineers to translate requirements into intuitive and attractive designs.",
+        "roleDetails": "This role requires a keen eye for visual detail and deep understanding of user-centered design principles. You will conduct user research, create wireframes and prototypes, and iterate based on feedback to deliver polished, functional designs."
     },
     {
         "id": "3",
@@ -48,7 +50,8 @@
         "postedAt": "3 days ago",
         "aboutCompany": "Data Systems specializes in big data processing and cloud infrastructure...",
         "description": "Join our backend team to build scalable and robust APIs that power our data-intensive applications.",
-        "role": "Design and implement server-side logic, optimize database queries, and ensure high performance and responsiveness."
+        "role": "Design and implement server-side logic, optimize database queries, and ensure high performance and responsiveness.",
+        "roleDetails": "You will architect and maintain our core API infrastructure, ensuring scalability and security. Experience with microservices, message queues, and cloud-native development is highly valued."
     },
     {
         "id": "4",
@@ -65,7 +68,8 @@
         "postedAt": "5 days ago",
         "aboutCompany": "Growth Co. helps startups scale their user base through data-driven marketing strategies...",
         "description": "We are seeking a results-oriented Marketing Manager to lead our growth initiatives and drive user acquisition.",
-        "role": "Develop and execute marketing campaigns, analyze performance metrics, and collaborate with content creators."
+        "role": "Develop and execute marketing campaigns, analyze performance metrics, and collaborate with content creators.",
+        "roleDetails": "You will own the marketing strategy end-to-end, from market research to campaign execution. Strong analytical skills and experience with marketing automation tools are essential for success in this role."
     },
     {
         "id": "5",
@@ -82,7 +86,8 @@
         "postedAt": "1 week ago",
         "aboutCompany": "AI Lab is at the forefront of artificial intelligence research and development...",
         "description": "This internship offers a unique opportunity to work on cutting-edge AI projects and learn from industry experts.",
-        "role": "Assist in data collection and preprocessing, train and evaluate machine learning models, and present findings to the team."
+        "role": "Assist in data collection and preprocessing, train and evaluate machine learning models, and present findings to the team.",
+        "roleDetails": "This is a hands-on learning experience where you will work with real datasets and contribute to production ML pipelines. Mentorship and growth opportunities are a key part of this internship."
     },
     {
         "id": "6",
@@ -99,6 +104,7 @@
         "postedAt": "2 weeks ago",
         "aboutCompany": "Cloud Corp provides managed cloud services to enterprise clients worldwide...",
         "description": "We are looking for a DevOps Engineer to automate our deployment pipelines and ensure the reliability of our infrastructure.",
-        "role": "Manage cloud resources, implement monitoring solutions, and troubleshoot infrastructure issues."
+        "role": "Manage cloud resources, implement monitoring solutions, and troubleshoot infrastructure issues.",
+        "roleDetails": "You will be instrumental in building and maintaining our CI/CD pipelines, ensuring 99.9% uptime for our services. Strong knowledge of containerization and infrastructure-as-code is required."
     }
 ]

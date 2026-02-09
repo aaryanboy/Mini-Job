@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Button from '../components/common/Button';
 import Tag from '../components/common/Tag';
+import NotificationToast from '../components/common/NotificationToast';
 import jobsData from '../data/jobs.json';
 
 const JobDetail = () => {
@@ -43,30 +44,12 @@ const JobDetail = () => {
 
   return (
     <>
-      {/* Notification Toast */}
-      {showNotification && (
-        <div 
-          className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center gap-3 md:gap-4 ${
-            isExiting ? 'animate-slide-down' : 'animate-slide-up'
-          }`}
-        >
-          <div className="bg-[#5B5FE6] text-white px-5 md:px-8 py-4 md:py-5 rounded-full text-base md:text-xl font-medium shadow-2xl flex items-center gap-3 md:gap-4">
-            Application submitted
-            <div className="bg-white/20 p-2 rounded-full">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth={2.5} 
-                stroke="currentColor" 
-                className="w-6 h-6"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      )}
+      <NotificationToast 
+        message="Application submitted" 
+        isVisible={showNotification} 
+        isExiting={isExiting} 
+      />
+
 
       <div className="bg-gradient-to-b from-[#E8E8F5] to-[#D5D5F0] min-h-screen pt-24 md:pt-40 pb-12 md:pb-16">
         {/* Header Card */}
@@ -139,9 +122,7 @@ const JobDetail = () => {
               <p className="text-lg leading-relaxed">
                 {job.role}
                 <br /><br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <br /><br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                {job.roleDetails}
               </p>
             </div>
           </div>
