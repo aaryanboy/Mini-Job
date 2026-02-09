@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Decorative curved shape */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E8E8F5] rounded-full -translate-y-1/2 translate-x-1/3 opacity-60" />
       
-      <div className="max-w-6xl mx-auto text-center relative z-10">
+      <div className="max-w-6xl mx-auto text-center relative z-10 select-none">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
           Find Your Next Opportunity

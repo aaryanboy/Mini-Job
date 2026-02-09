@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
           
           {/* Brand & Tagline */}
-          <div className="max-w-xl">
+          <div className="max-w-xl select-none">
             <h2 className="text-xl font-bold text-gray-900 mb-6">Mini-Job</h2>
             <h1 className="text-4xl md:text-5xl lg:text-5xl  text-gray-900 leading-tight uppercase">
               Connecting Talented<br />
