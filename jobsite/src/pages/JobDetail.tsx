@@ -103,12 +103,12 @@ const JobDetail = () => {
             <div className="flex gap-4">
               <Button 
                 variant="primary" 
-                className="px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transform transition-transform hover:-translate-y-1"
+                className="px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-shadow"
                 onClick={handleApply}
               >
                 Apply →
               </Button>
-              <Button variant="secondary" className="px-10 py-4 rounded-full text-lg font-bold bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none shadow-sm hover:shadow-md transform transition-transform hover:-translate-y-1">
+              <Button variant="secondary" className="px-10 py-4 rounded-full text-lg font-bold bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none shadow-sm hover:shadow-md transition-shadow">
                 Save
               </Button>
             </div>
