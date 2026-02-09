@@ -85,7 +85,7 @@ const Navbar = () => {
 
         {/* Desktop Sign Up / Sign In Button */}
         <Link
-          to="/auth"
+          to="/"
           className="hidden md:block bg-white text-gray-800 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 border border-gray-200"
         >
           Sign Up / Sign In
@@ -134,7 +134,7 @@ const Navbar = () => {
             })}
             <hr className="border-gray-100" />
             <Link
-              to="/auth"
+              to="/"
               onClick={() => setIsMenuOpen(false)}
               className="w-full text-center bg-[#5B5FE6] text-white px-5 py-3 rounded-xl text-base font-medium hover:bg-[#4a4ed4] transition-colors duration-200"
             >
