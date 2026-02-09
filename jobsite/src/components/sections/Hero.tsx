@@ -10,31 +10,31 @@ const Hero = () => {
   ];
 
   return (
-    <section className="bg-[#F5F5FA] min-h-screen pt-24 pb-16 px-4 relative overflow-hidden flex flex-col justify-center">
+    <section className="bg-[#F5F5FA] min-h-screen pt-20 md:pt-24 pb-12 md:pb-16 px-4 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative curved shape */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E8E8F5] rounded-full -translate-y-1/2 translate-x-1/3 opacity-60" />
+      <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#E8E8F5] rounded-full -translate-y-1/2 translate-x-1/3 opacity-60" />
       
       <div className="max-w-6xl mx-auto text-center relative z-10 select-none">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6">
           Find Your Next Opportunity
         </h1>
 
         {/* Subtitle */}
-        <p className="text-gray-500 text-lg mb-1">
+        <p className="text-gray-500 text-base md:text-lg mb-1">
           Search through thousands of job openings from top companies.
         </p>
-        <p className="text-gray-500 text-lg mb-10">
+        <p className="text-gray-500 text-base md:text-lg mb-8 md:mb-10">
           Your dream job is waiting.
         </p>
 
         {/* Search Box */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <div className="flex items-center bg-white border-2 border-[#5B5FE6] rounded-lg px-5 py-4">
+        <div className="max-w-2xl mx-auto mb-6 md:mb-8">
+          <div className="flex items-center bg-white border-2 border-[#5B5FE6] rounded-lg px-4 md:px-5 py-3 md:py-4">
             <input
               type="text"
               placeholder="Search jobs..."
-              className="flex-1 outline-none text-gray-700 placeholder-gray-400 text-lg"
+              className="flex-1 outline-none text-gray-700 placeholder-gray-400 text-base md:text-lg"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,12 +54,12 @@ const Hero = () => {
         </div>
 
         {/* Find Jobs Button - Centered */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-12 md:mb-16">
           <Button
             variant="primary"
-            width="300px"
-            height="58px"
-            text="22px"
+            width="240px"
+            height="54px"
+            text="18px"
             href="/find-jobs"
           >
             Find Jobs
@@ -69,7 +69,7 @@ const Hero = () => {
 
       {/* Stats Section - Using StatCard component */}
       <div className="w-full max-w-6xl mx-auto px-8">
-        <div className="flex justify-between items-center">
+        <div className="grid grid-cols-2 md:flex md:justify-between gap-6 md:gap-4 items-center">
           {stats.map((stat) => (
             <StatCard key={stat.label} label={stat.label} value={stat.value} />
           ))}

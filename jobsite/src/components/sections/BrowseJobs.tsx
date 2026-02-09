@@ -18,31 +18,31 @@ const BrowseJobs = () => {
 
   return (
     <section id="find-jobs" className="bg-[#F5F5FA] p-2 md:p-4">
-      <div className="w-full mx-auto bg-[#E8E8F5] rounded-[50px] min-h-screen p-12 md:p-32 relative overflow-hidden">
+      <div className="w-full mx-auto bg-[#E8E8F5] rounded-[30px] md:rounded-[50px] min-h-screen p-6 md:p-32 relative overflow-hidden">
         {/* Decorative shape */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white rounded-full -translate-y-1/2 -translate-x-1/2 opacity-40 blur-3xl" />
+           <div className="absolute top-0 left-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-white rounded-full -translate-y-1/2 -translate-x-1/2 opacity-40 blur-3xl" />
         </div>
         
         <div className="relative z-10">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-6xl font-bold text-gray-900 mb-3">
+        <div className="text-center mb-6 md:mb-10">
+          <h2 className="text-3xl md:text-6xl font-bold text-gray-900 mb-2 md:mb-3">
             Browse Open Positions
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 text-base md:text-lg">
             Explore opportunities from companies actively hiring
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex justify-center gap-3 mb-10">
+        <div className="flex justify-start md:justify-center gap-2 md:gap-3 mb-6 md:mb-10 overflow-x-auto pb-2 -mx-2 px-2">
           {filters.map((filter) => (
             <Button
               key={filter}
               variant={activeFilter === filter ? 'primary' : 'outline'}
               onClick={() => setActiveFilter(filter)}
-              className="px-6 py-2 text-sm"
+              className="px-4 md:px-6 py-2 text-sm whitespace-nowrap flex-shrink-0"
             >
               {filter}
             </Button>

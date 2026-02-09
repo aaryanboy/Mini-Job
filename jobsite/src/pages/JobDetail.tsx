@@ -41,11 +41,11 @@ const JobDetail = () => {
       {/* Notification Toast */}
       {showNotification && (
         <div 
-          className={`fixed bottom-8 right-8 z-50 flex items-center gap-4 ${
+          className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center gap-3 md:gap-4 ${
             isExiting ? 'animate-slide-down' : 'animate-slide-up'
           }`}
         >
-          <div className="bg-[#5B5FE6] text-white px-8 py-5 rounded-full text-xl font-medium shadow-2xl flex items-center gap-4">
+          <div className="bg-[#5B5FE6] text-white px-5 md:px-8 py-4 md:py-5 rounded-full text-base md:text-xl font-medium shadow-2xl flex items-center gap-3 md:gap-4">
             Application submitted
             <div className="bg-white/20 p-2 rounded-full">
               <svg 
@@ -63,10 +63,10 @@ const JobDetail = () => {
         </div>
       )}
 
-      <div className="bg-gradient-to-b from-[#E8E8F5] to-[#D5D5F0] min-h-screen pt-40 pb-16">
+      <div className="bg-gradient-to-b from-[#E8E8F5] to-[#D5D5F0] min-h-screen pt-24 md:pt-40 pb-12 md:pb-16">
         {/* Header Card */}
-        <div className="px-4 mb-8">
-          <div className="w-[98%] max-w-[1600px] mx-auto bg-white rounded-[30px] p-8 md:p-12 shadow-sm">
+        <div className="px-3 md:px-4 mb-6 md:mb-8">
+          <div className="w-full md:w-[98%] max-w-[1600px] mx-auto bg-white rounded-[20px] md:rounded-[30px] p-5 md:p-12 shadow-sm">
             {/* Company Name with Icon */}
             <div className="flex items-center gap-3 mb-4">
               <img 
@@ -79,7 +79,7 @@ const JobDetail = () => {
 
             {/* Job Title & Skills */}
             <div className="flex flex-wrap items-center gap-3 mb-3">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{job.title}</h1>
+              <h1 className="text-2xl md:text-4xl font-bold text-gray-900">{job.title}</h1>
               <div className="flex gap-2">
                 {job.skills.map(skill => (
                   <Tag key={skill} variant="outline" className="bg-[#F0F0F8] text-[#5B5FE6] border-[#E0E0F0] text-sm px-4 py-1.5">
@@ -100,15 +100,15 @@ const JobDetail = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button 
                 variant="primary" 
-                className="px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-shadow"
+                className="px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto"
                 onClick={handleApply}
               >
                 Apply →
               </Button>
-              <Button variant="secondary" className="px-10 py-4 rounded-full text-lg font-bold bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none shadow-sm hover:shadow-md transition-shadow">
+              <Button variant="secondary" className="px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold bg-[#E8E8F5] text-[#5B5FE6] hover:bg-[#dadaea] border-none shadow-sm hover:shadow-md transition-shadow w-full sm:w-auto">
                 Save
               </Button>
             </div>
@@ -116,10 +116,10 @@ const JobDetail = () => {
         </div>
 
       {/* About Section */}
-      <div className="px-4">
-        <div className="w-[98%] max-w-[1600px] mx-auto">
+      <div className="px-3 md:px-4">
+        <div className="w-full md:w-[98%] max-w-[1600px] mx-auto">
           {/* White Card for About Content */}
-          <div className="bg-white rounded-[30px] p-8 md:p-12 shadow-sm">
+          <div className="bg-white rounded-[20px] md:rounded-[30px] p-5 md:p-12 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">About the job</h2>
             
             <div className="text-gray-600 leading-relaxed select-none">

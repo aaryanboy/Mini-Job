@@ -21,7 +21,7 @@ const JobCard: React.FC<JobCardProps> = ({
   skills,
 }) => {
   return (
-    <div className="bg-white rounded-2xl  px-15 py-15 shadow-sm hover:shadow-md transition-shadow duration-200 min-h-[280px] flex flex-col">
+    <div className="bg-white rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200 min-h-[250px] md:min-h-[280px] flex flex-col">
       {/* Job Type Tag */}
       <div className="mb-4">
         <Tag variant="outline">{type}</Tag>

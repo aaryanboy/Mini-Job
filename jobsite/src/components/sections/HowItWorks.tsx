@@ -25,24 +25,24 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="bg-[#F5F5FA] py-24 px-4">
+    <section id="how-it-works" className="bg-[#F5F5FA] py-12 md:py-24 px-4">
       <div className="max-w-7xl mx-auto select-none">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl  text-gray-900 mb-4">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 md:mb-4">
             How It Works
           </h2>
-          <p className="text-gray-500 text-2xl">
+          <p className="text-gray-500 text-lg md:text-2xl">
             Get started with your job search in four simple steps
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {steps.map((item, index) => (
             <div 
               key={index}
-              className="bg-[#F5F5FA] rounded-[30px] p-10 text-center hover:shadow-lg transition-all duration-300"
+              className="bg-white md:bg-[#F5F5FA] rounded-[20px] md:rounded-[30px] p-6 md:p-10 text-center hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center">
                 <div className="mb-6 flex justify-start w-full">

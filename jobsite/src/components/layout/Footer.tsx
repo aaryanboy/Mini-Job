@@ -28,22 +28,22 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-white pt-24 pb-8 px-4 relative overflow-hidden">
+    <footer className="bg-white pt-12 md:pt-24 pb-8 px-4 relative overflow-hidden">
       {/* Decorative Spheres */}
-      <div className="absolute top-10 left-[10%] w-12 h-12 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-60 blur-sm" />
-      <div className="absolute top-0 right-[15%] w-20 h-20 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-80 blur-md" />
-      <div className="absolute bottom-1/3 left-4 w-8 h-8 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-50 blur-sm" />
-      <div className="absolute bottom-20 left-1/3 w-4 h-4 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-40 blur-[1px]" />
-      <div className="absolute top-1/2 right-4 w-6 h-6 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-60 blur-sm" />
-      <div className="absolute bottom-10 right-[25%] w-10 h-10 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-50 blur-sm" />
+      <div className="hidden md:block absolute top-10 left-[10%] w-12 h-12 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-60 blur-sm" />
+      <div className="hidden md:block absolute top-0 right-[15%] w-20 h-20 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-80 blur-md" />
+      <div className="hidden md:block absolute bottom-1/3 left-4 w-8 h-8 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-50 blur-sm" />
+      <div className="hidden md:block absolute bottom-20 left-1/3 w-4 h-4 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-40 blur-[1px]" />
+      <div className="hidden md:block absolute top-1/2 right-4 w-6 h-6 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-60 blur-sm" />
+      <div className="hidden md:block absolute bottom-10 right-[25%] w-10 h-10 rounded-full bg-gradient-to-br from-[#8E92FF] to-[#5B5FE6] opacity-50 blur-sm" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 md:gap-16 mb-12 md:mb-24">
           
           {/* Brand & Tagline */}
           <div className="max-w-xl select-none">
             <h2 className="text-xl font-bold text-gray-900 mb-6">Mini-Job</h2>
-            <h1 className="text-4xl md:text-5xl lg:text-5xl  text-gray-900 leading-tight uppercase">
+            <h1 className="text-3xl md:text-5xl lg:text-5xl text-gray-900 leading-tight uppercase">
               Connecting Talented<br />
               Professionals<br />
               With<br />
@@ -52,11 +52,11 @@ const Footer = () => {
           </div>
 
           {/* Links Columns */}
-          <div className="flex flex-wrap gap-12 lg:gap-24 mt-10">
+          <div className="grid grid-cols-2 md:flex flex-wrap gap-8 md:gap-12 lg:gap-24 mt-6 md:mt-10">
             {/* Job Seekers */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-6 text-lg">For Job Seekers</h3>
-              <ul className="space-y-4">
+              <h3 className="font-bold text-gray-900 mb-4 md:mb-6 text-base md:text-lg">For Job Seekers</h3>
+              <ul className="space-y-3 md:space-y-4">
                 {links.jobSeekers.map((link) => (
                   <li key={link.name}>
                     <Link to={link.href} className="text-gray-500 hover:text-[#5B5FE6] transition-colors">
@@ -69,8 +69,8 @@ const Footer = () => {
 
             {/* Employers */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-6 text-lg">For Employers</h3>
-              <ul className="space-y-4">
+              <h3 className="font-bold text-gray-900 mb-4 md:mb-6 text-base md:text-lg">For Employers</h3>
+              <ul className="space-y-3 md:space-y-4">
                 {links.employers.map((link) => (
                   <li key={link.name}>
                     <Link to={link.href} className="text-gray-500 hover:text-[#5B5FE6] transition-colors">
@@ -83,8 +83,8 @@ const Footer = () => {
 
             {/* Company */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-6 text-lg">Company</h3>
-              <ul className="space-y-4">
+              <h3 className="font-bold text-gray-900 mb-4 md:mb-6 text-base md:text-lg">Company</h3>
+              <ul className="space-y-3 md:space-y-4">
                 {links.company.map((link) => (
                   <li key={link.name}>
                     <Link to={link.href} className="text-gray-500 hover:text-[#5B5FE6] transition-colors">
@@ -98,9 +98,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 mt-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:pt-8 border-t border-gray-100 mt-8 md:mt-16 gap-6 md:gap-8">
           
-          <div className="flex flex-wrap gap-6 text-sm text-gray-500">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-gray-500">
              <Link to="/privacy" className="hover:text-gray-900">Privacy Policy</Link>
              <Link to="/terms" className="hover:text-gray-900">Terms & Conditions</Link>
              <Link to="/principles" className="hover:text-gray-900">Publishing Principles</Link>
@@ -108,7 +108,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
              {/* Social Icons */}
-             <div className="flex gap-4 mb-4 md:mb-0 mr-8">
+             <div className="flex gap-3 md:gap-4 mb-4 md:mb-0 mr-0 md:mr-8">
                 {/* LinkedIn */}
                 <SocialIcon path="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 {/* X (Twitter) */}
