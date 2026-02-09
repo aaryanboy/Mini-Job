@@ -48,7 +48,7 @@ const JobCard: React.FC<JobCardProps> = ({
       {/* View Details Button */}
       <Button
         variant="primary"
-        href={`/jobs/${id}`}
+        href={`/job/${id}`}
         className="w-full py-3"
       >
         View Details

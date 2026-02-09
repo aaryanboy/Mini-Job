@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../components/common/Button';
 import Tag from '../components/common/Tag';
 import jobsData from '../data/jobs.json';
@@ -9,6 +9,11 @@ const JobDetail = () => {
   const job = jobsData.find((j) => j.id === id);
   const [showNotification, setShowNotification] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
+
+  // Scroll to top when navigating to this page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const handleApply = () => {
     setShowNotification(true);
