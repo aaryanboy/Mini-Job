@@ -6,3 +6,6 @@ https://www.figma.com/design/4wd6hBQDvceTUOiU4Qu5Ul/minijobs?node-id=2008-3&t=vo
 
 prototype link
 https://www.figma.com/proto/4wd6hBQDvceTUOiU4Qu5Ul/minijobs?node-id=2008-3&t=voGUIYUrOe978CEm-1
+
+
+in website both mobile and pc responsive site 
