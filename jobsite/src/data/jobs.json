@@ -1,0 +1,104 @@
+[
+    {
+        "id": "1",
+        "title": "Senior Frontend Developer",
+        "company": "Tech Solutions Inc.",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=TechSolutions",
+        "location": "San Francisco, CA",
+        "type": "Full-time",
+        "skills": [
+            "React",
+            "TypeScript",
+            "CSS"
+        ],
+        "postedAt": "2 days ago",
+        "aboutCompany": "Tech Solutions Inc. is a leading provider of innovative software solutions...",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "role": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "id": "2",
+        "title": "Product Designer",
+        "company": "Creative Studio",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=CreativeStudio",
+        "location": "New York, NY",
+        "type": "Full-time",
+        "skills": [
+            "Figma",
+            "UI/UX",
+            "Prototyping"
+        ],
+        "postedAt": "1 day ago",
+        "aboutCompany": "Creative Studio is a design-first agency focused on building beautiful digital experiences...",
+        "description": "We are looking for a talented Product Designer to join our team. You will be responsible for designing user-centric interfaces and experiences for our clients.",
+        "role": "You will work closely with product managers and engineers to translate requirements into intuitive and attractive designs."
+    },
+    {
+        "id": "3",
+        "title": "Backend Engineer",
+        "company": "Data Systems",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=DataSystems",
+        "location": "Remote",
+        "type": "Remote",
+        "skills": [
+            "Node.js",
+            "PostgreSQL",
+            "AWS"
+        ],
+        "postedAt": "3 days ago",
+        "aboutCompany": "Data Systems specializes in big data processing and cloud infrastructure...",
+        "description": "Join our backend team to build scalable and robust APIs that power our data-intensive applications.",
+        "role": "Design and implement server-side logic, optimize database queries, and ensure high performance and responsiveness."
+    },
+    {
+        "id": "4",
+        "title": "Marketing Manager",
+        "company": "Growth Co.",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=GrowthCo",
+        "location": "Austin, TX",
+        "type": "Full-time",
+        "skills": [
+            "Marketing",
+            "SEO",
+            "Content"
+        ],
+        "postedAt": "5 days ago",
+        "aboutCompany": "Growth Co. helps startups scale their user base through data-driven marketing strategies...",
+        "description": "We are seeking a results-oriented Marketing Manager to lead our growth initiatives and drive user acquisition.",
+        "role": "Develop and execute marketing campaigns, analyze performance metrics, and collaborate with content creators."
+    },
+    {
+        "id": "5",
+        "title": "Data Scientist",
+        "company": "AI Lab",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=AILab",
+        "location": "Boston, MA",
+        "type": "Internship",
+        "skills": [
+            "Python",
+            "Machine Learning",
+            "Data Analysis"
+        ],
+        "postedAt": "1 week ago",
+        "aboutCompany": "AI Lab is at the forefront of artificial intelligence research and development...",
+        "description": "This internship offers a unique opportunity to work on cutting-edge AI projects and learn from industry experts.",
+        "role": "Assist in data collection and preprocessing, train and evaluate machine learning models, and present findings to the team."
+    },
+    {
+        "id": "6",
+        "title": "DevOps Engineer",
+        "company": "Cloud Corp",
+        "logo": "https://api.dicebear.com/9.x/icons/svg?seed=CloudCorp",
+        "location": "Seattle, WA",
+        "type": "Full-time",
+        "skills": [
+            "Docker",
+            "Kubernetes",
+            "CI/CD"
+        ],
+        "postedAt": "2 weeks ago",
+        "aboutCompany": "Cloud Corp provides managed cloud services to enterprise clients worldwide...",
+        "description": "We are looking for a DevOps Engineer to automate our deployment pipelines and ensure the reliability of our infrastructure.",
+        "role": "Manage cloud resources, implement monitoring solutions, and troubleshoot infrastructure issues."
+    }
+]
