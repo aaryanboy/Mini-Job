@@ -2,7 +2,7 @@ import Button from '../common/Button';
 
 const CallToAction = () => {
   return (
-    <section className="w-full bg-gradient-to-r from-[#FDFDFF] to-[#D5D5F5] py-20 px-4 relative overflow-hidden">
+    <section id="about" className="w-full bg-gradient-to-r from-[#FDFDFF] to-[#D5D5F5] py-20 px-4 relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto min-h-[400px] flex flex-col items-center justify-center text-center">
         
         <div className="relative z-10 max-w-3xl mx-auto">

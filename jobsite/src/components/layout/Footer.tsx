@@ -43,7 +43,7 @@ const Footer = () => {
           {/* Brand & Tagline */}
           <div className="max-w-xl">
             <h2 className="text-xl font-bold text-gray-900 mb-6">Mini-Job</h2>
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 leading-tight uppercase">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl  text-gray-900 leading-tight uppercase">
               Connecting Talented<br />
               Professionals<br />
               With<br />
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           {/* Links Columns */}
-          <div className="flex flex-wrap gap-12 lg:gap-24">
+          <div className="flex flex-wrap gap-12 lg:gap-24 mt-10">
             {/* Job Seekers */}
             <div>
               <h3 className="font-bold text-gray-900 mb-6 text-lg">For Job Seekers</h3>

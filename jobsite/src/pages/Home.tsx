@@ -5,7 +5,7 @@ import CallToAction from '../components/sections/CallToAction';
 
 const Home = () => {
   return (
-    <div>
+    <div id="home" className="pt-20">
       <Hero />
       <BrowseJobs />
       <HowItWorks />

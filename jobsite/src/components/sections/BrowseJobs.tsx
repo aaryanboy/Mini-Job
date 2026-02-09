@@ -17,7 +17,7 @@ const BrowseJobs = () => {
     : jobs.filter(job => job.type === activeFilter);
 
   return (
-    <section className="bg-[#F5F5FA] p-2 md:p-4">
+    <section id="find-jobs" className="bg-[#F5F5FA] p-2 md:p-4">
       <div className="w-full mx-auto bg-[#E8E8F5] rounded-[50px] min-h-screen p-12 md:p-32 relative overflow-hidden">
         {/* Decorative shape */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
